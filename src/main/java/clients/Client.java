@@ -3,21 +3,22 @@ package clients;
 import java.util.ArrayList;
 
 public class Client {
-    private String first_Name;
-    private String last_Name;
-    private String tarif_Name;
+    private String client_First_Name;
+    private String client_Last_Name;
+    private String client_Phone_Number;
+    private String client_Tarif_Name;
     private static int countClients = 0;
+
+    public Client(String client_First_Name, String client_Last_Name, String client_Phone_Number, String client_Tarif_Name) {
+        this.client_First_Name = client_First_Name;
+        this.client_Last_Name = client_Last_Name;
+        this.client_Tarif_Name = client_Tarif_Name;
+    }
 
     ArrayList<Client> listOfClients = new ArrayList<Client>();
 
-    public Client(String first_Name, String last_Name, String tarif_Name) {
-        this.first_Name = first_Name;
-        this.last_Name = last_Name;
-        this.tarif_Name = tarif_Name;
-    }
-
-    public void addClient(Client client) { //String firstName, String lastName, String tarifName) {
-        listOfClients.add(client);
+    public void addClient(Client client) {
+        listOfClients.add(new Client(client_First_Name, client_Last_Name, client_Phone_Number, client_Tarif_Name));
         countClients++;
     }
 
