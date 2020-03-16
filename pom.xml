@@ -6,8 +6,8 @@
     <groupId>epam</groupId>
     <artifactId>epamHomeWork1</artifactId>
     <version>1.0-SNAPSHOT</version>
-<dependencies>
 
+<dependencies>
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
     <dependency>
         <groupId>org.slf4j</groupId>
