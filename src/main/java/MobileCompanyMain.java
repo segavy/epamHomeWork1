@@ -17,7 +17,24 @@ public class MobileCompanyMain {
         Client client9 = new Client("Aleksander", "Pushkin", "+375299999999","");
         Client client10 = new Client("Mihail", "Lermontov", "+375290000000", "");
 
-        //Client.addClient(client1);
+        //Adding clients to the ArrayList
+        client1.addClient();
+        client2.addClient();
+        client3.addClient();
+        client4.addClient();
+        client5.addClient();
+        client6.addClient();
+        client7.addClient();
+        client8.addClient();
+        client9.addClient();
+        client10.addClient();
 
+
+
+
+
+        //getList
     }
+
+
 }

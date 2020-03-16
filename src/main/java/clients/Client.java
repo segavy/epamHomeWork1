@@ -17,9 +17,19 @@ public class Client {
 
     ArrayList<Client> listOfClients = new ArrayList<Client>();
 
-    public void addClient(Client client) {
+    public void addClient() {
         listOfClients.add(new Client(client_First_Name, client_Last_Name, client_Phone_Number, client_Tarif_Name));
         countClients++;
     }
+
+    public static void /*ArrayList<Client> */ getListOfClient( ArrayList<Client> client) {
+        for (int i = 0; i < client.size(); i++)
+            System.out.println(client.get(i));
+    }
+
+//    public ArrayList<Client> getListOfClient() {
+//        for (Client client : listOfClients)
+//            return(client);
+//    }
 
 }
