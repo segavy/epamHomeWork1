@@ -5,6 +5,9 @@ import java.util.ArrayList;
 public class MobileCompanyMain {
     public static void main(String[] args) {
 
+//        //Creating an ArrayList
+//        ArrayList<Client> listOfClients = new ArrayList<Client>();
+
         //Creating of new clients.
         Client client1 = new Client("Ekaterina", "Vaskina", "+375291111111", "");
         Client client2 = new Client("Irina", "Gonova", "+375292222222", "");
@@ -30,10 +33,9 @@ public class MobileCompanyMain {
         client10.addClient();
 
 
+        //Outputting the ArrayList  --  DO NOT WORK !!!!!!!
+        Client.getListOfClient(listOfClients);
 
-
-
-        //getList
     }
 
 
