@@ -17,7 +17,8 @@ public class Client {
     }
 
     //Creating an ArrayList
-    public ArrayList<Client> listOfClients = new ArrayList<Client>();
+    //public ArrayList<Client> listOfClients = new ArrayList<Client>();
+
 
     //Adding clients to the ArrayList
     public void addClient() {
