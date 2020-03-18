@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class MobileCompany {
     private String nameCompany;
     private ArrayList<Contract> contracts;
+    private ArrayList<Tarif> tarifs;
 
-    public MobileCompany(String nameCompany) {
+        public MobileCompany(String nameCompany) {
         this.nameCompany = nameCompany;
         contracts = new ArrayList<Contract>();
+        tarifs = new ArrayList<Tarif>();
     }
 
     public String getNameCompany() {
@@ -23,9 +25,17 @@ public class MobileCompany {
         return contracts;
     }
 
+    public void addTarif(Tarif tarif) {
+            tarifs.add(tarif);
+    }
+
+    public ArrayList<Tarif> getTarifs() {
+            return tarifs;
+    }
+
     @Override
     public String toString() {
-        return ("Company name is " + nameCompany + ", contract  is" + contracts);
+        return ("Company name is " + nameCompany /* + ", contract  is" + contracts */ );
     }
 
 

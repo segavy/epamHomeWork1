@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Tarif {
     private String nameTarif;
     private float cost;
-
     //ArrayList<Tarif> tarifs = new ArrayList<Tarif>();
 
     public Tarif(String nameTarif, float cost) {
@@ -20,6 +19,10 @@ public class Tarif {
     public float getCost() {
         return cost;
     }
+
+//    public void addTarif(tarifs) {
+//        tarifs.add(tarifs);
+//    }
 
     @Override
     public String toString() {

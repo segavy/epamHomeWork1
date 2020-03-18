@@ -27,7 +27,7 @@ public class Contract {
 
     @Override
     public String toString() {
-        return "Client " + client + ", tarif is " + tarif;
+        return "Client " + client /* + ", tarif is " + tarif */;
     }
 
 

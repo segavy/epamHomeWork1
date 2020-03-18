@@ -16,6 +16,17 @@ public class MobileCompanyApplication {
         Tarif internetMaxi = new Tarif("InternetMAXI", 15);
         Tarif bezlimit = new Tarif("Bezlimit", 150);
 
+        //ArrayList<Tarif> tarifs = new ArrayList<Tarif>();
+        mts.addTarif(children);
+        mts.addTarif(superMax);
+        mts.addTarif(internetMini);
+        mts.addTarif(internetMaxi);
+        mts.addTarif(bezlimit);
+
+        System.out.println(mts.getTarifs());
+
+        //System.out.println(mts.getTarif());
+
         //for (Tarif tarif:Tarif) {}
 
         Client client1 = new Client("Vasiliy", "+375291111111");
@@ -28,7 +39,7 @@ public class MobileCompanyApplication {
 
         Contract contract1 = new Contract(mts, client1, superMax);
         Contract contract2 = new Contract(mts, client2, bezlimit);
-        Contract contract3 = new Contract(mts, client3, bezlimit);
+        Contract contract3 = new Contract(mts, client3, children);
 
         mts.addContract(contract1);
         mts.addContract(contract2);
@@ -37,7 +48,7 @@ public class MobileCompanyApplication {
 
         System.out.println("The enable tarifs are : ");
 
-        System.out.println("Count of clients is "  + mts.getContracts().size());
+        System.out.println("Count of clients with contracts is "  + mts.getContracts().size());
 
 
 
