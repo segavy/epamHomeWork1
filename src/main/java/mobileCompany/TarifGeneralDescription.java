@@ -1,4 +1,4 @@
-package mobileCompanyTarifs;
+package mobileCompany;
 
 public class TarifGeneralDescription {
     private String tarif_name;
