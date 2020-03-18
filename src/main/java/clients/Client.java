@@ -4,7 +4,7 @@ public class Client {
     private String clientName;
     private String clientPhoneNumber;
 
-    public void Client(String clientName, String clientPhoneNumber) {
+    public Client(String clientName, String clientPhoneNumber) {
         this.clientName = clientName;
         this.clientPhoneNumber = clientPhoneNumber;
     }
@@ -17,6 +17,8 @@ public class Client {
         return clientPhoneNumber;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Client " + clientName + ", client phone number is " + clientPhoneNumber;
+    }
 }
