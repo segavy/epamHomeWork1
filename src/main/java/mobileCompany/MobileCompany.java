@@ -3,9 +3,9 @@ package mobileCompany;
 import java.util.ArrayList;
 
 public class MobileCompany {
-    private String nameCompany;
+    private String              nameCompany;
     private ArrayList<Contract> contracts;
-    private ArrayList<Tarif> tarifs;
+    private ArrayList<Tarif>    tarifs;
 
         public MobileCompany(String nameCompany) {
         this.nameCompany = nameCompany;

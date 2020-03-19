@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Tarif {
     private String nameTarif;
     private float cost;
-    //ArrayList<Tarif> tarifs = new ArrayList<Tarif>();
+//    private ArrayList<Tarif> tarifsSecondArrayList;
 
     public Tarif(String nameTarif, float cost) {
         this.nameTarif = nameTarif;
@@ -20,12 +20,26 @@ public class Tarif {
         return cost;
     }
 
-//    public void addTarif(tarifs) {
-//        tarifs.add(tarifs);
+
+
+    //Do not use now these three methods.
+//    public void creatSecondArrayList() {
+//        // ???????     Do not know if I will use it
+//        tarifsSecondArrayList = new ArrayList<Tarif>();
 //    }
+//    public void addTarifToSecondArrayList(Tarif tarifs) {
+//        this.tarifsSecondArrayList.add(tarifs);
+//    }
+//        public ArrayList<Tarif> getTarifs() {
+//        return tarifsSecondArrayList;
+//    }
+
+
+
 
     @Override
     public String toString() {
-        return "Tarif name is " + nameTarif + ", cost is " + cost;
+        return "\n" + "Tarif name is '" + nameTarif + "', cost is " + cost;
+
     }
 }

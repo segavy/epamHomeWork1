@@ -4,6 +4,7 @@ public class Client {
     private String clientName;
     private String clientPhoneNumber;
 
+
     public Client(String clientName, String clientPhoneNumber) {
         this.clientName = clientName;
         this.clientPhoneNumber = clientPhoneNumber;

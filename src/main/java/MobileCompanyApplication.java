@@ -23,19 +23,16 @@ public class MobileCompanyApplication {
         mts.addTarif(internetMaxi);
         mts.addTarif(bezlimit);
 
-        System.out.println(mts.getTarifs());
-
-        //System.out.println(mts.getTarif());
+        //mts.getTarifs().forEach(System.out::println);
 
         //for (Tarif tarif:Tarif) {}
 
-        Client client1 = new Client("Vasiliy", "+375291111111");
+        Client client1 = new Client ("Vasiliy", "+375291111111");
         Client client2 = new Client ("Ekaterina","+375292222222");
         Client client3 = new Client ("Alexander","+375293333333");
+        Client client4 = new Client ("Irina", "+375294444444");
 
-
-        ArrayList<Client> allClients = new ArrayList<Client>();
-
+        //ArrayList<Client> allClients = new ArrayList<Client>();
 
         Contract contract1 = new Contract(mts, client1, superMax);
         Contract contract2 = new Contract(mts, client2, bezlimit);
@@ -45,12 +42,24 @@ public class MobileCompanyApplication {
         mts.addContract(contract2);
         mts.addContract(contract3);
 
+        System.out.print("The enable tarifs are : ");
+        System.out.println(mts.getTarifs());
+        System.out.println();
 
-        System.out.println("The enable tarifs are : ");
+        System.out.println();
 
-        System.out.println("Count of clients with contracts is "  + mts.getContracts().size());
+        //allClients.forEach(System.out::println);
 
 
+//        children.creatSecondArrayList();
+//        children.addTarifToSecondArrayList(children);
+//        children.addTarifToSecondArrayList(superMax);
+//        children.addTarifToSecondArrayList(bezlimit);
+//        System.out.println(children.getTarifs());
+//        System.out.println();
+
+        System.out.println("Count of contracts of clients is : "  + mts.getContracts().size());
+        //System.out.println("Count of clients is : " + allClients.size());
 
 
     }
