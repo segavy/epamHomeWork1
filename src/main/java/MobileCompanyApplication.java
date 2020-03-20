@@ -55,11 +55,14 @@ public class MobileCompanyApplication {
         System.out.println("Count of contracts of clients is : "  + mts.getContracts().size());
         //System.out.println("Count of clients is : " + allClients.size());
 
+        System.out.println();
         System.out.println("Please review all tarifs sorted by ascending cost:");
         System.out.println(mts.sortTarif());
 
+        System.out.println();
+        System.out.println("Tarif with cost not more than 50 r. :");
+        System.out.println(mts.getTarifWithCost(50f));
+
     }
-
-
 }
 

@@ -36,7 +36,7 @@ public class MobileCompany {
     }
 
     public ArrayList<Tarif> sortTarif() {
-        ArrayList sortTarif = tarifs;
+        ArrayList<Tarif> sortTarif = tarifs;
         Collections.sort(sortTarif, new Comparator<Tarif>() {
             //@Override
             public int compare(Tarif o1, Tarif o2) {
@@ -50,6 +50,17 @@ public class MobileCompany {
             }
         });
         return sortTarif;
+    }
+
+
+    public ArrayList<Tarif> getTarifWithCost(float cost) {
+        ArrayList<Tarif> tarifWithCost = null;
+        for (Tarif tarif : tarifs) {
+            if (tarif.getCost() < cost) {
+                tarifWithCost.add(tarif);
+            }
+        }
+        return tarifWithCost;
     }
 
     @Override
