@@ -52,9 +52,8 @@ public class MobileCompany {
         return sortTarif;
     }
 
-
     public ArrayList<Tarif> getTarifWithCost(float cost) {
-        ArrayList<Tarif> tarifWithCost = null;
+        ArrayList<Tarif> tarifWithCost = new ArrayList<Tarif>();
         for (Tarif tarif : tarifs) {
             if (tarif.getCost() < cost) {
                 tarifWithCost.add(tarif);

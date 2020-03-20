@@ -4,7 +4,6 @@ import mobileCompany.MobileCompany;
 import mobileCompany.Tarif;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class MobileCompanyApplication {
     public static void main(String[] args) {
@@ -17,7 +16,6 @@ public class MobileCompanyApplication {
         Tarif internetMaxi = new Tarif("InternetMAXI", 15);
         Tarif bezlimit = new Tarif("Bezlimit", 150);
 
-        //ArrayList<Tarif> tarifs = new ArrayList<Tarif>();
         mts.addTarif(children);
         mts.addTarif(superMax);
         mts.addTarif(internetMini);
@@ -25,16 +23,16 @@ public class MobileCompanyApplication {
         mts.addTarif(bezlimit);
         mts.addTarif(new Tarif("TestTarif", 123));
 
-        //mts.getTarifs().forEach(System.out::println);
-
-        //for (Tarif tarif:Tarif) {}
-
         Client client1 = new Client ("Vasiliy", "+375291111111");
         Client client2 = new Client ("Ekaterina","+375292222222");
         Client client3 = new Client ("Alexander","+375293333333");
         Client client4 = new Client ("Irina", "+375294444444");
 
-        //ArrayList<Client> allClients = new ArrayList<Client>();
+        ArrayList<Client> allClients = new ArrayList<Client>();
+        allClients.add(client1);
+        allClients.add(client2);
+        allClients.add(client3);
+        allClients.add(client4);
 
         Contract contract1 = new Contract(mts, client1, superMax);
         Contract contract2 = new Contract(mts, client2, bezlimit);
@@ -46,14 +44,10 @@ public class MobileCompanyApplication {
 
         System.out.print("The enable tarifs are : ");
         System.out.println(mts.getTarifs());
-        System.out.println();
 
         System.out.println();
-
-        //allClients.forEach(System.out::println);
-
-        System.out.println("Count of contracts of clients is : "  + mts.getContracts().size());
-        //System.out.println("Count of clients is : " + allClients.size());
+        System.out.println("Count of registered clients is : "  + mts.getContracts().size());
+        System.out.println("Common count of clients is : " + allClients.size());
 
         System.out.println();
         System.out.println("Please review all tarifs sorted by ascending cost:");
@@ -62,7 +56,6 @@ public class MobileCompanyApplication {
         System.out.println();
         System.out.println("Tarif with cost not more than 50 r. :");
         System.out.println(mts.getTarifWithCost(50f));
-
     }
 }
 
