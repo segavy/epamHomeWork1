@@ -1,13 +1,15 @@
 package mobileCompany;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MobileCompany {
-    private String              nameCompany;
+    private String nameCompany;
     private ArrayList<Contract> contracts;
-    private ArrayList<Tarif>    tarifs;
+    private ArrayList<Tarif> tarifs;
 
-        public MobileCompany(String nameCompany) {
+    public MobileCompany(String nameCompany) {
         this.nameCompany = nameCompany;
         contracts = new ArrayList<Contract>();
         tarifs = new ArrayList<Tarif>();
@@ -26,17 +28,33 @@ public class MobileCompany {
     }
 
     public void addTarif(Tarif tarif) {
-            tarifs.add(tarif);
+        tarifs.add(tarif);
     }
 
     public ArrayList<Tarif> getTarifs() {
-            return tarifs;
+        return tarifs;
+    }
+
+    public ArrayList<Tarif> sortTarif() {
+        ArrayList sortTarif = tarifs;
+        Collections.sort(sortTarif, new Comparator<Tarif>() {
+            //@Override
+            public int compare(Tarif o1, Tarif o2) {
+                if (o1.getCost() > o2.getCost()) {
+                    return 1;
+                } else if (o1.getCost() < o2.getCost()) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        });
+        return sortTarif;
     }
 
     @Override
     public String toString() {
         return ("Company name is " + nameCompany /* + ", contract  is" + contracts */ );
     }
-
 
 }

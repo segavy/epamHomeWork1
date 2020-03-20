@@ -4,6 +4,7 @@ import mobileCompany.MobileCompany;
 import mobileCompany.Tarif;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MobileCompanyApplication {
     public static void main(String[] args) {
@@ -22,6 +23,7 @@ public class MobileCompanyApplication {
         mts.addTarif(internetMini);
         mts.addTarif(internetMaxi);
         mts.addTarif(bezlimit);
+        mts.addTarif(new Tarif("TestTarif", 123));
 
         //mts.getTarifs().forEach(System.out::println);
 
@@ -50,17 +52,11 @@ public class MobileCompanyApplication {
 
         //allClients.forEach(System.out::println);
 
-
-//        children.creatSecondArrayList();
-//        children.addTarifToSecondArrayList(children);
-//        children.addTarifToSecondArrayList(superMax);
-//        children.addTarifToSecondArrayList(bezlimit);
-//        System.out.println(children.getTarifs());
-//        System.out.println();
-
         System.out.println("Count of contracts of clients is : "  + mts.getContracts().size());
         //System.out.println("Count of clients is : " + allClients.size());
 
+        System.out.println("Please review all tarifs sorted by ascending cost:");
+        System.out.println(mts.sortTarif());
 
     }
 
