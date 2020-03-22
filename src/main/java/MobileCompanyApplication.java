@@ -2,11 +2,24 @@ import clients.Client;
 import mobileCompany.Contract;
 import mobileCompany.MobileCompany;
 import mobileCompany.Tarif;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 
 public class MobileCompanyApplication {
+
+    //private static final Logger lOGGER = Logger.getLogger(MobileCompanyApplication.class);
+    private static final Logger LOG  = LoggerFactory.getLogger(MobileCompanyApplication.class);
+    //LOGGER.info("Method started");
+
     public static void main(String[] args) {
+
+        LOG.debug("Debug message");
+
+        if (LOG.isDebugEnabled()) {
+            LOG.debug("Debug2");
+        }
 
         MobileCompany mts = new MobileCompany("MTS");
 

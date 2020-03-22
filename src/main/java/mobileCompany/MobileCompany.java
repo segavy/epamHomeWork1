@@ -3,11 +3,20 @@ package mobileCompany;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.logging.Logger;
+
+//import org.apache.log4j.Logger;
 
 public class MobileCompany {
     private String nameCompany;
     private ArrayList<Contract> contracts;
     private ArrayList<Tarif> tarifs;
+
+    //private static Logger logger = Logger.getLogger(src.main.java.mobileCompany.MobileCompany);
+
+//    private void runMe(String parameter) {
+//        if (logger) {}
+//    }
 
     public MobileCompany(String nameCompany) {
         this.nameCompany = nameCompany;
