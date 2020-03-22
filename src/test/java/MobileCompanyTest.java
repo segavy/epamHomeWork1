@@ -10,10 +10,12 @@ import java.util.ArrayList;
 
 public class MobileCompanyTest {
 
-    private static final Logger LOG  = LoggerFactory.getLogger(MobileCompanyTest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(MobileCompanyTest.class);
 
     @Test
     public void countOfAddedClientsShouldBeTheSameAsInTheMethodSIZE() {
+        LOG.info("Method for counting of clients was started");
+
         Client client1 = new Client("Vasiliy", "+375291111111");
         Client client2 = new Client("Ekaterina", "+375292222222");
         Client client3 = new Client("Alexander", "+375293333333");
@@ -24,11 +26,12 @@ public class MobileCompanyTest {
         allClients.add(client3);
         allClients.add(client4);
         Assert.assertEquals(4, allClients.size());
+        LOG.info("Method for counting of clients was finished");
     }
-
 
     @Test
     public void allTarifsShouldSortedAsAscendingCost() {
+        LOG.info("Method for sorting of tarifs was started");
         MobileCompany mts = new MobileCompany("MTS");
 
         Tarif children = new Tarif("Children", 1);
@@ -51,5 +54,6 @@ public class MobileCompanyTest {
 
         Assert.assertEquals(expected, mts.sortTarif());
 
+        LOG.info("Method for sorting of tarifs was finished");
     }
 }
