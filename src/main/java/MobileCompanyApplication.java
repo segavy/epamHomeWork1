@@ -22,7 +22,7 @@ public class MobileCompanyApplication {
         mts.addTarif(internetMini);
         mts.addTarif(internetMaxi);
         mts.addTarif(bezlimit);
-        mts.addTarif(new Tarif("TestTarif", 123));
+        mts.addTarif(new Tarif("TestTariff", 123));
 
         Client client1 = new Client ("Vasiliy", "+375291111111");
         Client client2 = new Client ("Ekaterina","+375292222222");
@@ -43,7 +43,7 @@ public class MobileCompanyApplication {
         mts.addContract(contract2);
         mts.addContract(contract3);
 
-        System.out.print("The enable tarifs are : ");
+        System.out.print("The enable tariffs are : ");
         System.out.println(mts.getTariffs());
 
         System.out.println();
@@ -51,11 +51,11 @@ public class MobileCompanyApplication {
         System.out.println("Common count of clients is : " + allClients.size());
 
         System.out.println();
-        System.out.println("Please review all tarifs sorted by ascending cost:");
+        System.out.println("Please review all tariffs sorted by ascending cost:");
         System.out.println(mts.sortTarif());
 
         System.out.println();
-        System.out.println("Tarif with cost not more than 20 r. :");
+        System.out.println("Tariff with cost not more than 20 r. :");
         System.out.println(mts.getTarifWithCost(20));
     }
 }
