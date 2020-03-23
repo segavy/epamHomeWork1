@@ -44,7 +44,7 @@ public class MobileCompanyApplication {
         mts.addContract(contract3);
 
         System.out.print("The enable tarifs are : ");
-        System.out.println(mts.getTarifs());
+        System.out.println(mts.getTariffs());
 
         System.out.println();
         System.out.println("Count of registered clients is : "  + mts.getContracts().size());
@@ -55,8 +55,8 @@ public class MobileCompanyApplication {
         System.out.println(mts.sortTarif());
 
         System.out.println();
-        System.out.println("Tarif with cost not more than 50 r. :");
-        System.out.println(mts.getTarifWithCost(50));
+        System.out.println("Tarif with cost not more than 20 r. :");
+        System.out.println(mts.getTarifWithCost(20));
     }
 }
 

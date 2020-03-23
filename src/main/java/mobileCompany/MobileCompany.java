@@ -3,25 +3,16 @@ package mobileCompany;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.logging.Logger;
-
-//import org.apache.log4j.Logger;
 
 public class MobileCompany {
     private String nameCompany;
     private ArrayList<Contract> contracts;
-    private ArrayList<Tarif> tarifs;
-
-    //private static Logger logger = Logger.getLogger(src.main.java.mobileCompany.MobileCompany);
-
-//    private void runMe(String parameter) {
-//        if (logger) {}
-//    }
+    private ArrayList<Tarif> tariffs;
 
     public MobileCompany(String nameCompany) {
         this.nameCompany = nameCompany;
         contracts = new ArrayList<Contract>();
-        tarifs = new ArrayList<Tarif>();
+        tariffs = new ArrayList<Tarif>();
     }
 
     public String getNameCompany() {
@@ -37,15 +28,15 @@ public class MobileCompany {
     }
 
     public void addTarif(Tarif tarif) {
-        tarifs.add(tarif);
+        tariffs.add(tarif);
     }
 
-    public ArrayList<Tarif> getTarifs() {
-        return tarifs;
+    public ArrayList<Tarif> getTariffs() {
+        return tariffs;
     }
 
     public ArrayList<Tarif> sortTarif() {
-        ArrayList<Tarif> sortTarif = tarifs;
+        ArrayList<Tarif> sortTarif = tariffs;
         Collections.sort(sortTarif, new Comparator<Tarif>() {
             //@Override
             public int compare(Tarif o1, Tarif o2) {
@@ -63,7 +54,7 @@ public class MobileCompany {
 
     public ArrayList<Tarif> getTarifWithCost(float cost) {
         ArrayList<Tarif> tarifWithCost = new ArrayList<Tarif>();
-        for (Tarif tarif : tarifs) {
+        for (Tarif tarif : tariffs) {
             if (tarif.getCost() < cost) {
                 tarifWithCost.add(tarif);
             }
